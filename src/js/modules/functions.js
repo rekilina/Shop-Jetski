@@ -17,12 +17,14 @@ export function iswebp() {
     })
 }
 
+// кастомные стрелки slick
 $('.banner-section__slider').slick({
     dots: true,
     prevArrow: '<button class="banner-section__slider-btn banner-section__slider-btn-prev"> <img src="img/arrow-left.svg" alt="arrow-left"></button>',
     nextArrow: '<button class="banner-section__slider-btn banner-section__slider-btn-next"> <img src="img/arrow-right.svg" alt="arrow-right"></button>',
 })
 
+// работа табов поиска
 $('.search__tabs-item').on('click', function(e) {
     e.preventDefault();
     $('.search__tabs-item').removeClass('search__tabs-item--active');

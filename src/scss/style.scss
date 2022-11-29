@@ -398,3 +398,70 @@ section {
         }
     }
 }
+.categories {
+    &__inner {
+        // display: flex;
+        // justify-content: space-between;
+        // flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    &__item {
+        background: #FFFFFF;
+        border: 1px solid #CDCDCD;
+        border-radius: 3px;
+        min-width: 370px;
+        height: 129px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        transition: all $time;
+        &:hover {
+            border: 1px solid $white;
+            box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+            & .categories__item-title {
+                color: $blue;
+            }
+
+        }
+        &-info {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &-wrap {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-title {
+            font-family: $barlow;
+            font-weight: 700;
+            font-size: 23px;
+            line-height: 1.2;
+        }
+        &-text {
+            font-family: $SFProDisplay;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.2;
+            color: #C4C4C4;
+            display: inline-block;
+            &::after {
+                content: '';
+                width: 6px;
+                height: 9px;
+                background-image: url(../img/arrow-more.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                display: inline-block;
+                margin-left: 4px;
+            }
+            
+        }
+    }
+}
