@@ -186,3 +186,187 @@ body.stop-scrolling {
   align-items: center;
   justify-content: center;
 }
+
+.banner-section {
+  padding-top: 50px;
+}
+
+.banner-section__inner {
+  display: flex;
+}
+
+.banner-section__slider {
+  max-width: 870px;
+  flex-basis: 870px;
+  flex-shrink: 1;
+  position: relative;
+}
+
+.banner-section__slider-btn {
+  position: absolute !important;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  border: none;
+  z-index: 5;
+  background-color: transparent;
+}
+
+.banner-section__slider-btn:hover {
+  cursor: pointer;
+}
+
+.banner-section__slider-btn-prev {
+  left: 20px;
+}
+
+.banner-section__slider-btn-next {
+  right: 20px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.slick-dots button {
+  padding: 0;
+  font-size: 0;
+  margin: 0;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.slick-dots button:hover {
+  cursor: pointer;
+}
+
+.slick-dots li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.slick-active button {
+  background-color: #FFFFFF;
+}
+
+.sale-item {
+  max-width: 265px;
+  text-align: center;
+  border: 1px solid #CDCDCD;
+  border-radius: 3px;
+  position: relative;
+}
+
+.sale-item__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sale-item__info {
+  color: #FFFFFF;
+  background-color: #1C62CD;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+.sale-item__price {
+  font-family: "Barlow", sans-serif;
+  text-align: right;
+}
+
+.sale-item__price-new {
+  font-weight: 700;
+  font-size: 27px;
+  color: #1C62CD;
+  line-height: 1.2;
+  margin-right: -6px;
+  padding-right: 25px;
+}
+
+.sale-item__price-new::after {
+  content: "";
+  background-image: url(../img/ruble-blue.svg);
+  position: relative;
+  top: 0px;
+  right: -5px;
+  width: 15px;
+  height: 18px;
+  display: inline-block;
+}
+
+.sale-item__price-old {
+  font-weight: 400;
+  color: #CDCDCD;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-right: 3px;
+  display: inline-block;
+  position: relative;
+  margin-right: 16px;
+  padding-right: 6px;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 1px), #cdcdcd 50%, rgba(0, 0, 0, 0) calc(50% + 1px), rgba(0, 0, 0, 0) 100%);
+}
+
+.sale-item__price-old::after {
+  content: "";
+  background-image: url(../img/ruble-grey.svg);
+  width: 8px;
+  height: 10px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  bottom: 0px;
+  left: 6px;
+}
+
+.sale-item-title {
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #2F3035;
+}
+
+.sale-item__footer {
+  background-color: #F0F0F4;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 26px 0;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+.sale-item__footer-text {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.sale-item__footer-date {
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #1C62CD;
+}

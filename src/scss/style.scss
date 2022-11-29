@@ -6,7 +6,11 @@ $blue: #1C62CD;
 $grey: #F0F0F4;
 $white: #FFFFFF;
 $black: #000000;
+$border-grey: #CDCDCD;
 $time: .3s;
+$barlow: 'Barlow', sans-serif;
+$SFProDisplay: 'SFProDisplay', sans-serif;
+
 
 *, *::after, *::before {
     padding: 0;
@@ -29,7 +33,7 @@ body {
     overflow-x: clip;
     margin: 0 auto; 
     color: $text-main;
-    font-family: 'SFProDisplay', sans-serif;
+    font-family: $SFProDisplay;
     font-size: 20px;
     line-height: 1.2;
 }
@@ -96,7 +100,6 @@ body.stop-scrolling {
                     transform: scale(0);
                     display: block;
                     transition: $time;
-                    // margin-top: 15px;
                     position: absolute;
                     bottom: -14px;
                     transform-origin: left;
@@ -155,4 +158,173 @@ body.stop-scrolling {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.banner-section {
+    padding-top: 50px;
+    &__inner {
+        display: flex;
+        // justify-content: space-between;
+        // display: inline-block;
+    }
+    &__slider {
+        max-width: 870px;
+        flex-basis: 870px;
+        flex-shrink: 1;
+        position: relative;
+        &-btn {
+            position: absolute!important;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0;
+            padding: 0;
+            border: none;
+            z-index: 5;
+            background-color: transparent;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &-btn-prev {
+                left: 20px;
+        }
+        &-btn-next {
+            right: 20px;
+        }
+    }
+}
+.slick {
+    &-dots {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        & button {
+            padding: 0;
+            font-size: 0;
+            margin: 0;
+            width: 11px;
+            height: 11px;
+            border: 1px solid $white;
+            border-radius: 50%;
+            background-color: transparent;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        & li {
+            display: inline-block;
+            padding: 0 5px;
+        }
+    }
+    &-active button {
+        background-color: $white;
+    }
+}
+.sale-item {
+    max-width: 265px;
+    text-align: center;
+    border: 1px solid $border-grey;
+    border-radius: 3px;
+    position: relative;
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__info {
+        color: $white;
+        background-color: $blue;
+        padding: 8px 20px;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.1em;
+    }
+    &__price {
+        font-family: $barlow;
+        text-align: right;
+        &-new {
+            font-weight: 700;
+            font-size: 27px;
+            color: $blue;
+            line-height: 1.2;
+            margin-right: -6px;
+            padding-right: 25px;
+            &::after {
+                content: '';
+                background-image: url(../img/ruble-blue.svg);
+                position: relative;
+                top: 0px;
+                right: -5px;
+                width: 15px;
+                height: 18px;
+                display: inline-block;
+            }
+        }
+        &-old {
+            font-weight: 400;
+            color: $border-grey;
+            font-size: 14px;
+            line-height: 1.2;
+            margin-right: 3px;
+            display: inline-block;
+            position: relative;
+            margin-right: 16px;
+            padding-right: 6px;
+            background: linear-gradient(to top left,
+             rgba(0,0,0,0) 0%,
+             rgba(0,0,0,0) calc(50% - 1px),
+             rgba($border-grey,1) 50%,
+             rgba(0,0,0,0) calc(50% + 1px),
+             rgba(0,0,0,0) 100%);
+            &::after {
+                content: '';
+                background-image: url(../img/ruble-grey.svg);
+                width: 8px;
+                height: 10px;
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-position: center center;
+                position: relative;
+                bottom: 0px;
+                left: 6px;
+            }
+        }
+    }
+    &-title {
+        font-family: $SFProDisplay;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        color: $text-main;
+    }
+    &__footer {
+        background-color: $grey;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 26px 0;
+        margin-top: 10px;
+        position: absolute;
+        bottom: 0;
+        &-text {
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+        }
+        &-date {
+            font-family: $barlow;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            color: #1C62CD;
+        }
+    }
 }
