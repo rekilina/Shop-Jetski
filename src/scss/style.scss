@@ -159,11 +159,13 @@ body.stop-scrolling {
     align-items: center;
     justify-content: center;
 }
+section {
+    padding-top: 80px;
+}
 .banner-section {
-    padding-top: 50px;
     &__inner {
         display: flex;
-        // justify-content: space-between;
+        justify-content: space-between;
         // display: inline-block;
     }
     &__slider {
@@ -325,6 +327,74 @@ body.stop-scrolling {
             line-height: 22px;
             text-align: center;
             color: #1C62CD;
+        }
+    }
+}
+
+.search {
+    &__inner {
+
+    }
+    &__tabs {
+        margin-bottom: 25px;
+        &-item {
+            padding: 11px 26px;
+            &--active {
+                border-radius: 5px;
+                background-color: $grey;
+                font-weight: 700;
+                font-family: $SFProDisplay;
+            }
+        }
+    }
+    &__content {
+        &-form {
+            display: flex;
+        }
+        &-btn {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: $white;
+            font-family: $SFProDisplay;
+            background-color: $blue;
+            border-radius: 3px;
+            padding: 17px 40px;
+            border: none;
+            margin-left: -5px;
+        }
+        &-input {
+            font-family: $SFProDisplay;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #656464;
+            background-color: $grey;
+            border-radius: 3px;
+            padding: 5px 20px;
+            border: none;
+            width: 100%;
+            // outline: 1px solid $border-grey;
+            &::placeholder {
+                color: #656464;
+            }
+            &:focus {
+                outline: 1px solid $border-grey;
+                border: none;
+            }
+            &:active {
+                outline: 1px solid $border-grey;
+                border: none;
+            }
+        }
+        &-item {
+            display: none;
+            &--active {
+                display: block;
+            }
         }
     }
 }
