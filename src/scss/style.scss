@@ -1,0 +1,129 @@
+
+@import "fonts";
+
+$text-main: #2F3035;
+$blue: #1C62CD;
+$grey: #F0F0F4;
+$white: #FFFFFF;
+$black: #000000;
+$time: .5s;
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+html {
+    overflow-x: clip;
+}
+body {
+    pointer-events: all!important;
+    background-color: #ffffff;
+    overflow-x: clip;
+    margin: 0 auto; 
+    color: $text-main;
+    font-family: 'SFProDisplay', sans-serif;
+    font-size: 20px;
+    line-height: 1.2;
+}
+body.stop-scrolling {
+    overflow: auto!important;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    &__top {
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 122px;
+        }
+    }
+    &__adress {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
+        margin-right: 60px;
+        width: 265px;
+        padding-left: 30px;
+        position: relative;
+        display: inline-block;
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../img/location.svg);
+            width: 30px;
+            height: 30px;
+            top: -10px;
+            left: 0;
+        }
+    }
+    &__box {
+        display: flex;
+    }
+}
+.menu {
+    &__item {
+        display: inline-block;
+        & + .menu__item {
+            padding-left: 50px;
+        }
+    }
+    &__list {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+}
+.menu-categories {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    &__link:hover {
+        font-weight: 600;
+    }
+}
+.user__list {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    &-item {
+        display: flex;
+        gap: 10px;
+    }
+    &-link {
+        &:last-child {
+            position: relative;
+        }
+    }
+}
+.cart__counter {
+    position: absolute;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.2;
+    width: 20px;
+    height: 20px;
+    color: $white;
+    background-color: $blue;
+    border-radius: 50%;
+    text-align: center;
+    right: -13px;
+    bottom: -7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
