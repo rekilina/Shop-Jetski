@@ -6,7 +6,7 @@ $blue: #1C62CD;
 $grey: #F0F0F4;
 $white: #FFFFFF;
 $black: #000000;
-$time: .5s;
+$time: .3s;
 
 *, *::after, *::before {
     padding: 0;
@@ -74,6 +74,43 @@ body.stop-scrolling {
     &__box {
         display: flex;
     }
+    &__bottom {
+        & .menu-categories {
+            background-color: $grey;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 53px;
+            &__link {
+                font-weight: 400;
+                display: inline-block;
+                // width: 12%;
+                min-width: 130px;
+                text-align: center;
+                position: relative;
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    background-color: $blue;
+                    transform: scale(0);
+                    display: block;
+                    transition: $time;
+                    // margin-top: 15px;
+                    position: absolute;
+                    bottom: -14px;
+                    transform-origin: left;
+                }
+                &:hover{
+                    font-weight: 600;
+                    &::after {
+                        transform: scale(1);
+                    }
+                }
+            }
+            
+        }
+    }
 }
 .menu {
     &__item {
@@ -86,14 +123,6 @@ body.stop-scrolling {
         font-weight: 700;
         font-size: 20px;
         line-height: 1.2;
-    }
-}
-.menu-categories {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.2;
-    &__link:hover {
-        font-weight: 600;
     }
 }
 .user__list {
