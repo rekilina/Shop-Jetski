@@ -966,3 +966,80 @@ section {
         display: inline;
     }
 }
+.footer {
+    background-color: $border-grey;
+    color: $text-main;
+    &__top {
+        padding-top: 43px;
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-item {}
+        &-news {
+            width: 295px;
+        }
+        &-title {
+            font-family: $SFProDisplay;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.2;
+            color: #2F3035;            
+        }
+    }
+    &__form {
+        margin-top: 34px;
+        display: flex;
+        justify-content: center;
+        &-input {
+            font-family: $SFProDisplay;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            &::placeholder {
+                color: #C4C4C4;
+            }
+            outline: none;
+            border: none;
+            padding: 10px 12px;
+        }
+        &-btn {
+            text-transform: uppercase;
+            padding: 10px 16px;
+            border: none;
+            background-color: $blue;
+            color: $white;
+            font-family: $SFProDisplay;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 13px;
+            text-align: center;
+            letter-spacing: 0.12em;
+        }
+    }
+    &__list {
+        &-link {
+            font-family: $SFProDisplay;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #2F3035;
+        }
+    }
+    &__bottom {
+        padding: 46px 0 22px;
+        display: flex;
+        justify-content: center;
+        &-link {
+            font-size: 10px;
+            margin: 0 40px;
+            color: #48494D;
+        }
+    }
+    & .social {
+        display: flex;
+        gap: 30px;
+    }
+}

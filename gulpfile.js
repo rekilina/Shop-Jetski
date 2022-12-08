@@ -12,6 +12,7 @@ global.app = {
 }
 
 import {copy} from "./gulp/tasks/copy.js";
+import {copySVG} from "./gulp/tasks/copy.js";
 import {reset} from "./gulp/tasks/reset.js";
 import {html} from "./gulp/tasks/html.js";
 import {server} from "./gulp/tasks/server.js";
@@ -25,6 +26,7 @@ import {svgSprive} from "./gulp/tasks/svgSprite.js"
 function watcher() {
     // gulp.watch(path.watch.files, copy);
     gulp.watch(path.watch.css, copy);
+    gulp.watch(path.watch.svg, copySVG);
     gulp.watch(path.watch.html, html);
     gulp.watch(path.watch.scss, scss);
     gulp.watch(path.watch.js, js);
@@ -36,7 +38,7 @@ export { svgSprive }
 
 const fonts = gulp.series(otfToTtf, ttfToWoff, copyWoff2, fontsStyle);
 
-const mainTask = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
+const mainTask = gulp.series(fonts, gulp.parallel(copy, copySVG, html, scss, js, images));
 
 
 // Сценарий выполнения задач

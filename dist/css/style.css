@@ -1048,3 +1048,94 @@ section {
 .products-add .slick-slide img {
   display: inline;
 }
+
+.footer {
+  background-color: #CDCDCD;
+  color: #2F3035;
+}
+
+.footer__top {
+  padding-top: 43px;
+}
+
+.footer__top-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__top-news {
+  width: 295px;
+}
+
+.footer__top-title {
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #2F3035;
+}
+
+.footer__form {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__form-input {
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  padding: 10px 12px;
+}
+
+.footer__form-input::-moz-placeholder {
+  color: #C4C4C4;
+}
+
+.footer__form-input::placeholder {
+  color: #C4C4C4;
+}
+
+.footer__form-btn {
+  text-transform: uppercase;
+  padding: 10px 16px;
+  border: none;
+  background-color: #1C62CD;
+  color: #FFFFFF;
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+  letter-spacing: 0.12em;
+}
+
+.footer__list-link {
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #2F3035;
+}
+
+.footer__bottom {
+  padding: 46px 0 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__bottom-link {
+  font-size: 10px;
+  margin: 0 40px;
+  color: #48494D;
+}
+
+.footer .social {
+  display: flex;
+  gap: 30px;
+}
