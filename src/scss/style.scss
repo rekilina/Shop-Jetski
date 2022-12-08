@@ -1297,10 +1297,12 @@ section {
         &-grid2 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            row-gap: 15px;
         }
         &-grid3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            row-gap: 15px;
         }
         &-label {
             font-family: $SFProDisplay;

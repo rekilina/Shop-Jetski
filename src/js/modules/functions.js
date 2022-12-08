@@ -73,5 +73,5 @@ $('.catalog__filter-select').styler();
 
 $('.filter-aside__item-drop').on('click', function(e) {
     $(this).toggleClass('filter-aside__item-drop--active');
-    $(this).find('.filter-aside__checkbox-wrap').slideToggle();
+    $(this).find('.filter-aside__checkbox-wrap').slideToggle('300');
 })

@@ -1377,11 +1377,13 @@ section {
 .filter-aside__checkbox-grid2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  row-gap: 15px;
 }
 
 .filter-aside__checkbox-grid3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  row-gap: 15px;
 }
 
 .filter-aside__checkbox-label {
