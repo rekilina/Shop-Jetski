@@ -67,3 +67,11 @@ $('.products-add-slider').slick({
     prevArrow: '<button class="products-slider-btn products-slider-btn-prev"> <img src="img/arrow-left-black.svg" alt="arrow-left-black"></button>',
     nextArrow: '<button class="products-slider-btn products-slider-btn-next"> <img src="img/arrow-right-black.svg" alt="arrow-right-black"></button>',
 })
+
+$('.filter-style').styler();
+$('.catalog__filter-select').styler();
+
+$('.filter-aside__item-drop').on('click', function(e) {
+    $(this).toggleClass('filter-aside__item-drop--active');
+    $(this).find('.filter-aside__checkbox-wrap').slideToggle();
+})
