@@ -1048,3 +1048,37 @@ section {
         align-items: center;
     }
 }
+.breadcrumbs {
+    margin-bottom: 40px;
+    margin-top: 43px;
+    &__list {
+        &-li {
+            display: inline-block;
+            padding-right: 16px;
+            margin-right: 10px;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                background-image: url(../img/link-arrow.svg);
+                width: 6px;
+                height: 12px;
+                bottom: 4px;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            &:last-child::after {
+                display: none;
+            }
+        }
+        &-link {
+            font-family: $SFProDisplay;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            color: #C4C4C4;
+        }
+    }
+}
