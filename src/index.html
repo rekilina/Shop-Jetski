@@ -144,19 +144,23 @@
         <section class="products">
             <div class="container">
                 <div class="products__inner">
+                    <h3 class="products__title">
+                        Популярные товары
+                    </h3>
                     <div class="tabs-wrapper">
                         <div class="tabs products__tabs">
-                            <a href="#" class="tab tab--active products__tab">запчасти</a>
-                            <a href="#" class="tab products__tab">моторы</a>
-                            <a href="#" class="tab products__tab">шины</a>
-                            <a href="#" class="tab products__tab">электроника</a>
-                            <a href="#" class="tab products__tab">инструменты</a>
-                            <a href="#" class="tab products__tab">аксессуары</a>
+                            <a href="#products-tab-1" class="tab products__tab">запчасти</a>
+                            <a href="#products-tab-2" class="tab tab--active products__tab">моторы</a>
+                            <a href="#products-tab-3" class="tab products__tab">шины</a>
+                            <a href="#products-tab-4" class="tab products__tab">электроника</a>
+                            <a href="#products-tab-5" class="tab products__tab">инструменты</a>
+                            <a href="#products-tab-6" class="tab products__tab">аксессуары</a>
                         </div>
                         <div class="tabs-container products__container">
-                            <div class="tabs-content products__content tabs-content--active">
+                            <div class="tab-content products__content" id="products-tab-1">
+                                slider1
                             </div>
-                            <div class="tabs-content products__content">
+                            <div class="tab-content products__content tab-content--active" id="products-tab-2">
                                 <div class="products-slider">
                                     <div class="products-slider__item">
                                         <div class="products-item__wrapper">
@@ -230,9 +234,78 @@
                                             </a>
                                         </div>
                                     </div>
+                                    <div class="products-slider__item">
+                                        <div class="products-item__wrapper products-item__not-available">
+                                            <button class="products-item__cart">
+                                                <img src="@img/cart-white.svg" alt="cart-white">
+                                            </button>
+                                            <button class="products-item__favourite"></button>
+                                            <a href="#" class="products-item products-item--sale">
+                                                <p class="products-item__hover">посмотреть товар</p>
+                                                <img src="@img/product-item-4.png" alt="product-item-4" class="product-item__img">
+                                                <h4 class="products-item__title">
+                                                    Спасательное снаряжение
+                                                </h4>
+                                                <p class="products-item__price">68 000 ₽</p>
+                                                <p class="products-item__notify-text">нет в наличии</p>
+                                                <button class="products-item__notify-link">Сообщить о поступлении</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="products-slider__item">
+                                        <div class="products-item__wrapper products-item__not-available">
+                                            <button class="products-item__cart">
+                                                <img src="@img/cart-white.svg" alt="cart-white">
+                                            </button>
+                                            <button class="products-item__favourite"></button>
+                                            <a href="#" class="products-item products-item--sale">
+                                                <p class="products-item__hover">посмотреть товар</p>
+                                                <img src="@img/product-item-4.png" alt="product-item-4" class="product-item__img">
+                                                <h4 class="products-item__title">
+                                                    Спасательное снаряжение
+                                                </h4>
+                                                <p class="products-item__price">68 000 ₽</p>
+                                                <p class="products-item__notify-text">нет в наличии</p>
+                                                <button class="products-item__notify-link">Сообщить о поступлении</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="products-slider__item">
+                                        <div class="products-item__wrapper products-item__not-available">
+                                            <button class="products-item__cart">
+                                                <img src="@img/cart-white.svg" alt="cart-white">
+                                            </button>
+                                            <button class="products-item__favourite"></button>
+                                            <a href="#" class="products-item products-item--sale">
+                                                <p class="products-item__hover">посмотреть товар</p>
+                                                <img src="@img/product-item-4.png" alt="product-item-4" class="product-item__img">
+                                                <h4 class="products-item__title">
+                                                    Спасательное снаряжение
+                                                </h4>
+                                                <p class="products-item__price">68 000 ₽</p>
+                                                <p class="products-item__notify-text">нет в наличии</p>
+                                                <button class="products-item__notify-link">Сообщить о поступлении</button>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="tab-content products__content" id="products-tab-3">
+                                slider3
+                            </div>
+                            <div class="tab-content products__content" id="products-tab-4">
+                                slider4
+                            </div>
+                            <div class="tab-content products__content" id="products-tab-5">
+                                slider5
+                            </div>
+                            <div class="tab-content products__content" id="products-tab-6">
+                                slider6
+                            </div>
                         </div>
+                    </div>
+                    <div class="products__more-wrapper">
+                        <a href="#" class="products__more-item">Показать еще</a>
                     </div>
                 </div>
             </div>

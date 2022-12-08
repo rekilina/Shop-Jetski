@@ -226,7 +226,7 @@ section {
   right: 20px;
 }
 
-.slick-dots {
+.banner-section .slick-dots {
   position: absolute;
   bottom: 40px;
   left: 0;
@@ -235,7 +235,7 @@ section {
   text-align: center;
 }
 
-.slick-dots button {
+.banner-section .slick-dots button {
   padding: 0;
   font-size: 0;
   margin: 0;
@@ -246,16 +246,16 @@ section {
   background-color: transparent;
 }
 
-.slick-dots button:hover {
+.banner-section .slick-dots button:hover {
   cursor: pointer;
 }
 
-.slick-dots li {
+.banner-section .slick-dots li {
   display: inline-block;
   padding: 0 5px;
 }
 
-.slick-active button {
+.banner-section .slick-active button[id*=slick-slide] {
   background-color: #FFFFFF;
 }
 
@@ -515,6 +515,90 @@ section {
   margin-left: 4px;
 }
 
+.tab-content {
+  display: none;
+}
+
+.tab-content.tab-content--active {
+  display: block;
+}
+
+.products__tabs {
+  margin-bottom: 25px;
+}
+
+.products__tab {
+  padding-bottom: 10px;
+}
+
+.products__tab + .products__tab {
+  margin-left: 50px;
+}
+
+.products__more-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.products__more-item {
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2F3035;
+  background: #F0F0F4;
+  padding: 17px 43px;
+  margin: 35px auto 0;
+  display: inline-block;
+}
+
+.products-slider {
+  overflow: visible;
+  padding-left: 10px;
+}
+
+.products-slider .slick-list {
+  padding: 20px 0 20px 13px;
+  width: 101%;
+}
+
+.products-slider-btn {
+  position: absolute !important;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  border: none;
+  z-index: 5;
+  background-color: transparent;
+}
+
+.products-slider-btn:hover {
+  cursor: pointer;
+}
+
+.products-slider-btn-prev {
+  left: -30px;
+}
+
+.products-slider-btn-next {
+  right: -30px;
+}
+
+.products__title {
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1.2;
+  color: #2F3035;
+  margin-bottom: 25px;
+}
+
 .products-item {
   border-radius: 3px;
   text-align: center;
@@ -673,7 +757,12 @@ section {
   width: 80%;
   opacity: 0;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
   transition: 0.3s;
   color: #2F3035;
+}
+
+.products .slick-slide img {
+  display: inline;
 }

@@ -51,7 +51,9 @@ $('.products-item__favourite').on('click', function(e) {
 
 // кастомные стрелки slick
 $('.products-slider').slick({
-    dots: true,
-    // prevArrow: '<button class="banner-section__slider-btn banner-section__slider-btn-prev"> <img src="img/arrow-left.svg" alt="arrow-left"></button>',
-    // nextArrow: '<button class="banner-section__slider-btn banner-section__slider-btn-next"> <img src="img/arrow-right.svg" alt="arrow-right"></button>',
+    dots: false,
+    slidesToScroll: 1,
+    slidesToShow: 4,
+    prevArrow: '<button class="products-slider-btn products-slider-btn-prev"> <img src="img/arrow-left-black.svg" alt="arrow-left-black"></button>',
+    nextArrow: '<button class="products-slider-btn products-slider-btn-next"> <img src="img/arrow-right-black.svg" alt="arrow-right-black"></button>',
 })
