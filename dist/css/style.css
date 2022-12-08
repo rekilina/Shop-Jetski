@@ -1138,4 +1138,7 @@ section {
 .footer .social {
   display: flex;
   gap: 30px;
+  width: 285px;
+  height: 100%;
+  align-items: center;
 }

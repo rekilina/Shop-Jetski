@@ -975,7 +975,9 @@ section {
             display: flex;
             justify-content: space-between;
         }
-        &-item {}
+        &-item {
+            // width: 190px;
+        }
         &-news {
             width: 295px;
         }
@@ -1041,5 +1043,8 @@ section {
     & .social {
         display: flex;
         gap: 30px;
+        width: 285px;
+        height: 100%;
+        align-items: center;
     }
 }
