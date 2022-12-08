@@ -37,8 +37,10 @@ $('.search__tabs-item').on('click', function(e) {
 $('.tab').on('click', function(e) {
     e.preventDefault();
 
-    $('.tab').removeClass('tab--active');
-    $('.tab-content').removeClass('tab-content--active');
+    // $('.tab').removeClass('tab--active');
+    $($(this).siblings()).removeClass('tab--active');
+    // $('.tab-content').removeClass('tab-content--active');
+    $($(this).parent().siblings().find('.tab-content')).removeClass('tab-content--active');
 
     $(this).addClass('tab--active');
     $($(this).attr('href')).addClass('tab-content--active');
@@ -51,6 +53,14 @@ $('.products-item__favourite').on('click', function(e) {
 
 // кастомные стрелки slick
 $('.products-slider').slick({
+    dots: false,
+    slidesToScroll: 1,
+    slidesToShow: 4,
+    prevArrow: '<button class="products-slider-btn products-slider-btn-prev"> <img src="img/arrow-left-black.svg" alt="arrow-left-black"></button>',
+    nextArrow: '<button class="products-slider-btn products-slider-btn-next"> <img src="img/arrow-right-black.svg" alt="arrow-right-black"></button>',
+})
+
+$('.products-add-slider').slick({
     dots: false,
     slidesToScroll: 1,
     slidesToShow: 4,
