@@ -1372,6 +1372,7 @@ section {
   padding: 16px 85px;
   border: none;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .filter-aside__params-more:focus {
@@ -1385,6 +1386,7 @@ section {
   align-items: center;
   margin: 15px auto;
   gap: 15px;
+  cursor: pointer;
 }
 
 .filter-aside__params-text {
@@ -1403,6 +1405,7 @@ section {
 }
 
 .filter-aside__params-setdefault {
+  cursor: pointer;
   font-family: "SFProDisplay", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1432,11 +1435,16 @@ section {
   letter-spacing: 0.07em;
   color: #BDBEC2;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .filter-aside__promo-link--active {
   background: #1C62CD;
   color: #FFFFFF;
+}
+
+.filter-aside__promo-input {
+  display: none;
 }
 
 .filter-aside__item {

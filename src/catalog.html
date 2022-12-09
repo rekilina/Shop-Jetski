@@ -283,10 +283,27 @@
                                                 <div class="filter-aside__wrapper">
                                                     <div class="filter-aside__promo">
                                                         <ul class="filter-aside__promo-list">
-                                                            <li class="filter-aside__promo-li"><a href="#" class="filter-aside__promo-link filter-aside__promo-link--active">Sale</a></li>
-                                                            <li class="filter-aside__promo-li"><a href="#" class="filter-aside__promo-link">new</a></li>
-                                                            <li class="filter-aside__promo-li"><a href="#" class="filter-aside__promo-link">hit</a></li>
-                                                            <li class="filter-aside__promo-li"><a href="#" class="filter-aside__promo-link">дилер</a></li>
+                                                            <!-- ЭТО ДОЛЖНЫ БЫТЬ ЧЕКБОКСЫ -->
+                                                            <li class="filter-aside__promo-li">
+                                                                <input id="promo-sale" type="checkbox" class="filter-style filter-aside__promo-input">
+                                                                <label for="promo-sale" class="filter-aside__promo-link">sale</label>
+                                                                <!-- <a href="#" class="filter-aside__promo-link filter-aside__promo-link--active">Sale</a> -->
+                                                            </li>
+                                                            <li class="filter-aside__promo-li">
+                                                                <input id="promo-new" type="checkbox" class="filter-style filter-aside__promo-input">
+                                                                <label for="promo-new" class="filter-aside__promo-link">new</label>
+                                                                <!-- <a href="#" class="filter-aside__promo-link">new</a> -->
+                                                            </li>
+                                                            <li class="filter-aside__promo-li">
+                                                                <input id="promo-hit" type="checkbox" class="filter-style filter-aside__promo-input">
+                                                                <label for="promo-hit" class="filter-aside__promo-link">hit</label>
+                                                                <!-- <a href="#" class="filter-aside__promo-link">hit</a> -->
+                                                            </li>
+                                                            <li class="filter-aside__promo-li">
+                                                                <input id="promo-diler" type="checkbox" class="filter-style filter-aside__promo-input">
+                                                                <label for="promo-diler" class="filter-aside__promo-link">дилер</label>
+                                                                <!-- <a href="#" class="filter-aside__promo-link">дилер</a> -->
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -336,7 +353,7 @@
                                             <p class="filter-aside__params-text">Дополнительные параметры</p>
                                             <img src="@img/arrow-up.svg" alt="arrow-up" class="filter-aside__params-img">
                                         </div>
-                                        <button class="filter-aside__params-setdefault ">Сбросить фильтр</button>
+                                        <button class="filter-aside__params-setdefault" type="reset">Сбросить фильтр</button>
                                     </div>
                                 </div>
                                 <div id="filter-2" class="tab-content catalog__aside-tabcontent">content-2</div>
