@@ -675,10 +675,8 @@ section {
         }
 
         &__wrapper {
-            // width: 271px;
             display: inline-block;
             position: relative;
-            // height: 403px;
         }
 
         &__wrapper.products-item__not-available {
@@ -761,11 +759,12 @@ section {
 
         &__img {
             width: 200px;
+            height: 200px;
         }
 
         &__title {
             font-weight: 400;
-            padding: 14px 0 25px;
+            padding: 5px 0 25px;
             font-size: 18px;
             width: 80%;
             margin: 0 auto;
@@ -1273,11 +1272,31 @@ section {
                 opacity: 1;
             }
         }
-
+        &-select {
+            border: 1px solid #d7d9df;
+            font-size: 14px;
+            line-height: 1.2;
+            margin-right: 34px;
+            padding: 8px 10px 8px 20px;
+            & .jq-selectbox__select {
+                line-height: 1;
+                height: auto;
+                &:hover {
+                    height: auto;
+                }
+            }
+            & .jq-selectbox__trigger {
+                top: 5px;
+            }
+            & .jq-selectbox__dropdown {
+                top: 29.6px;
+                left: 0px;
+            }
+        }
         &-btns {
             display: flex;
             align-items: center;
-
+            
             & button {
                 background: transparent;
                 cursor: pointer;
@@ -1293,9 +1312,16 @@ section {
                 }
             }
         }
-
+        &-changeview {
+            &--active {
+                & .catalog__filter-img {
+                    opacity: 1;
+                }
+            }
+        }
         &-img {
             width: 100%;
+            opacity: .3;
         }
     }
 
@@ -1311,6 +1337,15 @@ section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
+        &--line {
+            grid-template-columns: repeat(1, 1fr);
+            & .products-item {
+                display: flex;
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
     }
 
     &__aside {

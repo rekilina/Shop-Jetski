@@ -80,3 +80,15 @@ $('.filter-aside__promo-link').on('click', function(e) {
     e.preventDefault();
     $(this).toggleClass('filter-aside__promo-link--active');
 })
+
+$('.catalog__filter-changeview').on('click', function(e) {
+    $('.catalog__filter-changeview').removeClass('catalog__filter-changeview--active');
+    $(this).addClass('catalog__filter-changeview--active');
+    if($('.catalog__filter-line').hasClass('catalog__filter-changeview--active')) {
+        $('.catalog__grid').addClass('catalog__grid--line');
+    } else {
+        $('.catalog__grid').removeClass('catalog__grid--line');
+    }
+})
+
+
