@@ -24,7 +24,7 @@ $range.ionRangeSlider({
     to: to,
     onStart: updateInputs,
     onChange: updateInputs,
-    onFinish: updateInputs
+    onFinish: updateInputs,
 });
 instance = $range.data("ionRangeSlider");
 

@@ -71,7 +71,12 @@ $('.products-add-slider').slick({
 $('.filter-style').styler();
 $('.catalog__filter-select').styler();
 
-$('.filter-aside__title-wrap').on('click', function(e) {
+$('.filter-aside__drop').on('click', function(e) {
     $(this).toggleClass('filter-aside__item-drop--active');
     $(this).parent().find('.filter-aside__checkbox-wrap, .filter-aside__wrapper').slideToggle('300');
+})
+
+$('.filter-aside__promo-link').on('click', function(e) {
+    e.preventDefault();
+    $(this).toggleClass('filter-aside__promo-link--active');
 })
