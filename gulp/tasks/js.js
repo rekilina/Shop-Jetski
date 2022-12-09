@@ -32,6 +32,7 @@ export const js = () => {
             entry: {
                 app: "./src/js/app.js",
                 rangeslider: "./src/js/rangeslider.min.js",
+                ionrangeslider: "./src/js/ionrangeSlider.js",
                 formstyler: "./src/js/jquery.formstyler.min.js"    
             },
             output: {

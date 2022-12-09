@@ -1,4 +1,3 @@
-
 @import "fonts";
 
 $text-main: #2F3035;
@@ -12,33 +11,39 @@ $barlow: 'Barlow', sans-serif;
 $SFProDisplay: 'SFProDisplay', sans-serif;
 
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
+
 a {
     cursor: pointer;
     text-decoration: none;
     color: inherit;
 }
+
 html {
     overflow-x: clip;
 }
+
 body {
-    pointer-events: all!important;
+    pointer-events: all !important;
     background-color: #ffffff;
     overflow-x: clip;
-    margin: 0 auto; 
+    margin: 0 auto;
     color: $text-main;
     font-family: $SFProDisplay;
     font-size: 20px;
     line-height: 1.2;
 }
+
 body.stop-scrolling {
-    overflow: auto!important;
+    overflow: auto !important;
 }
 
 .container {
@@ -56,6 +61,7 @@ body.stop-scrolling {
             min-height: 122px;
         }
     }
+
     &__adress {
         font-weight: 700;
         font-size: 20px;
@@ -65,6 +71,7 @@ body.stop-scrolling {
         padding-left: 30px;
         position: relative;
         display: inline-block;
+
         &::before {
             content: "";
             position: absolute;
@@ -75,9 +82,11 @@ body.stop-scrolling {
             left: 0;
         }
     }
+
     &__box {
         display: flex;
     }
+
     &__bottom {
         & .menu-categories {
             background-color: $grey;
@@ -85,6 +94,7 @@ body.stop-scrolling {
             justify-content: space-around;
             align-items: center;
             min-height: 53px;
+
             &__link {
                 font-weight: 400;
                 display: inline-block;
@@ -92,6 +102,7 @@ body.stop-scrolling {
                 min-width: 130px;
                 text-align: center;
                 position: relative;
+
                 &::after {
                     content: '';
                     width: 100%;
@@ -104,44 +115,53 @@ body.stop-scrolling {
                     bottom: -14px;
                     transform-origin: left;
                 }
-                &:hover{
+
+                &:hover {
                     font-weight: 600;
+
                     &::after {
                         transform: scale(1);
                     }
                 }
             }
-            
+
         }
     }
 }
+
 .menu {
     &__item {
         display: inline-block;
-        & + .menu__item {
+
+        &+.menu__item {
             padding-left: 50px;
         }
     }
+
     &__list {
         font-weight: 700;
         font-size: 20px;
         line-height: 1.2;
     }
 }
+
 .user__list {
     margin-right: 15px;
     display: flex;
     align-items: center;
+
     &-item {
         display: flex;
         gap: 10px;
     }
+
     &-link {
         &:last-child {
             position: relative;
         }
     }
 }
+
 .cart__counter {
     position: absolute;
     font-weight: 500;
@@ -159,22 +179,26 @@ body.stop-scrolling {
     align-items: center;
     justify-content: center;
 }
+
 section {
     padding-top: 80px;
 }
+
 .banner-section {
     &__inner {
         display: flex;
         justify-content: space-between;
         // display: inline-block;
     }
+
     &__slider {
         max-width: 870px;
         flex-basis: 870px;
         flex-shrink: 1;
         position: relative;
+
         &-btn {
-            position: absolute!important;
+            position: absolute !important;
             top: 50%;
             transform: translateY(-50%);
             margin: 0;
@@ -182,17 +206,21 @@ section {
             border: none;
             z-index: 5;
             background-color: transparent;
+
             &:hover {
                 cursor: pointer;
             }
         }
+
         &-btn-prev {
-                left: 20px;
+            left: 20px;
         }
+
         &-btn-next {
             right: 20px;
         }
     }
+
     & .slick {
         &-dots {
             position: absolute;
@@ -201,6 +229,7 @@ section {
             right: 0;
             margin: 0 auto;
             text-align: center;
+
             & button {
                 padding: 0;
                 font-size: 0;
@@ -210,31 +239,37 @@ section {
                 border: 1px solid $white;
                 border-radius: 50%;
                 background-color: transparent;
+
                 &:hover {
                     cursor: pointer;
                 }
             }
+
             & li {
                 display: inline-block;
                 padding: 0 5px;
             }
         }
+
         &-active button[id*='slick-slide'] {
             background-color: $white;
         }
     }
 }
+
 .sale-item {
     max-width: 265px;
     text-align: center;
     border: 1px solid $border-grey;
     border-radius: 3px;
     position: relative;
-    &__top{
+
+    &__top {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
     }
+
     &__info {
         color: $white;
         background-color: $blue;
@@ -244,9 +279,11 @@ section {
         line-height: 15px;
         letter-spacing: 0.1em;
     }
+
     &__price {
         font-family: $barlow;
         text-align: right;
+
         &-new {
             font-weight: 700;
             font-size: 27px;
@@ -254,6 +291,7 @@ section {
             line-height: 1.2;
             margin-right: -6px;
             padding-right: 25px;
+
             &::after {
                 content: '';
                 background-image: url(../img/ruble-blue.svg);
@@ -265,6 +303,7 @@ section {
                 display: inline-block;
             }
         }
+
         &-old {
             font-weight: 400;
             color: $border-grey;
@@ -276,11 +315,12 @@ section {
             margin-right: 16px;
             padding-right: 6px;
             background: linear-gradient(to top left,
-             rgba(0,0,0,0) 0%,
-             rgba(0,0,0,0) calc(50% - 1px),
-             rgba($border-grey,1) 50%,
-             rgba(0,0,0,0) calc(50% + 1px),
-             rgba(0,0,0,0) 100%);
+                    rgba(0, 0, 0, 0) 0%,
+                    rgba(0, 0, 0, 0) calc(50% - 1px),
+                    rgba($border-grey, 1) 50%,
+                    rgba(0, 0, 0, 0) calc(50% + 1px),
+                    rgba(0, 0, 0, 0) 100%);
+
             &::after {
                 content: '';
                 background-image: url(../img/ruble-grey.svg);
@@ -295,6 +335,7 @@ section {
             }
         }
     }
+
     &-title {
         font-family: $SFProDisplay;
         font-style: normal;
@@ -304,6 +345,7 @@ section {
         text-align: center;
         color: $text-main;
     }
+
     &__footer {
         background-color: $grey;
         display: flex;
@@ -314,11 +356,13 @@ section {
         margin-top: 10px;
         position: absolute;
         bottom: 0;
+
         &-text {
             font-size: 18px;
             line-height: 21px;
             text-align: center;
         }
+
         &-date {
             font-family: $barlow;
             font-style: normal;
@@ -332,13 +376,14 @@ section {
 }
 
 .search {
-    &__inner {
+    &__inner {}
 
-    }
     &__tabs {
         margin-bottom: 25px;
+
         &-item {
             padding: 11px 26px;
+
             &--active {
                 border-radius: 5px;
                 background-color: $grey;
@@ -347,10 +392,12 @@ section {
             }
         }
     }
+
     &__content {
         &-form {
             display: flex;
         }
+
         &-btn {
             font-weight: 700;
             font-size: 14px;
@@ -365,6 +412,7 @@ section {
             border: none;
             margin-left: -5px;
         }
+
         &-input {
             font-family: $SFProDisplay;
             font-style: normal;
@@ -377,27 +425,33 @@ section {
             padding: 5px 20px;
             border: none;
             width: 100%;
+
             // outline: 1px solid $border-grey;
             &::placeholder {
                 color: #656464;
             }
+
             &:focus {
                 outline: 1px solid $border-grey;
                 border: none;
             }
+
             &:active {
                 outline: 1px solid $border-grey;
                 border: none;
             }
         }
+
         &-item {
             display: none;
+
             &--active {
                 display: block;
             }
         }
     }
 }
+
 .categories {
     &__inner {
         // display: flex;
@@ -407,6 +461,7 @@ section {
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
+
     &__item {
         background: #FFFFFF;
         border: 1px solid #CDCDCD;
@@ -417,32 +472,38 @@ section {
         display: flex;
         justify-content: space-between;
         transition: all $time;
+
         &:hover {
             border: 1px solid $white;
             box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+
             & .categories__item-title {
                 color: $blue;
             }
 
         }
+
         &-info {
             width: 50%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
+
         &-wrap {
             width: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         &-title {
             font-family: $barlow;
             font-weight: 700;
             font-size: 23px;
             line-height: 1.2;
         }
+
         &-text {
             font-family: $SFProDisplay;
             font-style: normal;
@@ -451,6 +512,7 @@ section {
             line-height: 1.2;
             color: #C4C4C4;
             display: inline-block;
+
             &::after {
                 content: '';
                 width: 6px;
@@ -461,33 +523,39 @@ section {
                 display: inline-block;
                 margin-left: 4px;
             }
-            
+
         }
     }
 }
+
 .tab-content {
     display: none;
 }
+
 .tab-content.tab-content--active {
     display: block;
 }
+
 .products {
-    &__inner {
-        
-    }
+    &__inner {}
+
     &__tabs {
         margin-bottom: 25px;
     }
+
     &__tab {
         padding-bottom: 10px;
-        & + .products__tab {
+
+        &+.products__tab {
             margin-left: 50px;
         }
     }
+
     & .tab--active {
         font-weight: 700;
         display: inline-block;
         position: relative;
+
         &::after {
             content: '';
             display: inline-block;
@@ -497,15 +565,19 @@ section {
             position: absolute;
             left: 0;
             bottom: 0;
-        } 
+        }
     }
+
     &__container {}
+
     &__content {}
+
     &__more {
         &-wrapper {
             width: 100%;
             text-align: center;
         }
+
         &-item {
             font-family: $SFProDisplay;
             font-style: normal;
@@ -522,15 +594,18 @@ section {
             display: inline-block;
         }
     }
+
     &-slider {
         overflow: visible;
         padding-left: 10px;
+
         & .slick-list {
             padding: 20px 0 20px 13px;
             width: 101%;
         }
+
         &-btn {
-            position: absolute!important;
+            position: absolute !important;
             top: 50%;
             transform: translateY(-50%);
             margin: 0;
@@ -538,17 +613,21 @@ section {
             border: none;
             z-index: 5;
             background-color: transparent;
+
             &:hover {
                 cursor: pointer;
             }
+
             &-prev {
                 left: -30px;
             }
+
             &-next {
                 right: -30px;
             }
         }
     }
+
     &__title {
         font-family: $barlow;
         font-style: normal;
@@ -558,6 +637,7 @@ section {
         color: $text-main;
         margin-bottom: 25px;
     }
+
     &-item {
         border-radius: 3px;
         text-align: center;
@@ -567,15 +647,18 @@ section {
         transition: $time;
         border: 1px solid $border-grey;
         height: 403px;
+
         &:hover {
             & .products-item__hover {
                 opacity: 1;
                 color: $text-main;
             }
+
             box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
             border-color: $white;
             color: $blue;
         }
+
         &--sale::before {
             content: 'SALE';
             background-color: $blue;
@@ -590,29 +673,36 @@ section {
             letter-spacing: 0.07em;
             z-index: 6;
         }
+
         &__wrapper {
             // width: 271px;
             display: inline-block;
             position: relative;
             // height: 403px;
         }
-        &__wrapper.products-item__not-available { 
+
+        &__wrapper.products-item__not-available {
+
             & .products-item__notify-link,
             & .products-item__notify-text {
                 display: block;
             }
+
             & .products-item__cart {
                 display: none;
             }
+
             & .products-item__price {
                 display: none;
             }
+
             &:hover {
                 & .products-item__hover {
                     display: none;
                 }
             }
         }
+
         &__notify {
             &-link {
                 font-family: $SFProDisplay;
@@ -633,6 +723,7 @@ section {
                 cursor: pointer;
                 display: none;
             }
+
             &-text {
                 font-family: $SFProDisplay;
                 font-style: normal;
@@ -646,6 +737,7 @@ section {
                 display: none;
             }
         }
+
         &__favourite {
             position: absolute;
             top: 16px;
@@ -661,13 +753,16 @@ section {
             outline: none;
             border: none;
             cursor: pointer;
+
             &--active {
                 background-image: url('../img/heart-blue.svg');
             }
         }
+
         &__img {
             width: 200px;
-        } 
+        }
+
         &__title {
             font-weight: 400;
             padding: 14px 0 25px;
@@ -675,6 +770,7 @@ section {
             width: 80%;
             margin: 0 auto;
         }
+
         &__cart {
             position: absolute;
             width: 60px;
@@ -690,11 +786,13 @@ section {
             justify-content: center;
             cursor: pointer;
         }
+
         &__price {
             font-weight: 700;
             font-size: 30px;
             line-height: 1.2;
         }
+
         &__hover {
             padding: 18px 21px;
             background: rgba($white, .9);
@@ -712,32 +810,38 @@ section {
             color: $text-main;
         }
     }
+
     & .slick-slide img {
         display: inline;
     }
 }
+
 .banner {
     img {
         width: 100%;
     }
 }
+
 .products-add {
-    &__inner {
-        
-    }
+    &__inner {}
+
     &__tabs {
         margin-bottom: 25px;
     }
+
     &__tab {
         padding-bottom: 10px;
-        & + .products-add__tab {
+
+        &+.products-add__tab {
             margin-left: 50px;
         }
     }
+
     & .tab--active {
         font-weight: 700;
         display: inline-block;
         position: relative;
+
         &::after {
             content: '';
             display: inline-block;
@@ -747,15 +851,19 @@ section {
             position: absolute;
             left: 0;
             bottom: 0;
-        } 
+        }
     }
+
     &__container {}
+
     &__content {}
+
     &__more {
         &-wrapper {
             width: 100%;
             text-align: center;
         }
+
         &-item {
             font-family: $SFProDisplay;
             font-style: normal;
@@ -772,15 +880,18 @@ section {
             display: inline-block;
         }
     }
+
     &-slider {
         overflow: visible;
         padding-left: 10px;
+
         & .slick-list {
             padding: 20px 0 20px 13px;
             width: 101%;
         }
+
         &-btn {
-            position: absolute!important;
+            position: absolute !important;
             top: 50%;
             transform: translateY(-50%);
             margin: 0;
@@ -788,17 +899,21 @@ section {
             border: none;
             z-index: 5;
             background-color: transparent;
+
             &:hover {
                 cursor: pointer;
             }
+
             &-prev {
                 left: -30px;
             }
+
             &-next {
                 right: -30px;
             }
         }
     }
+
     &__title {
         font-family: $barlow;
         font-style: normal;
@@ -808,6 +923,7 @@ section {
         color: $text-main;
         margin-bottom: 25px;
     }
+
     &-item {
         border-radius: 3px;
         text-align: center;
@@ -817,15 +933,18 @@ section {
         transition: $time;
         border: 1px solid $border-grey;
         height: 403px;
+
         &:hover {
             & .products-add-item__hover {
                 opacity: 1;
                 color: $text-main;
             }
+
             box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
             border-color: $white;
             color: $blue;
         }
+
         &--sale::before {
             content: 'SALE';
             background-color: $blue;
@@ -840,29 +959,36 @@ section {
             letter-spacing: 0.07em;
             z-index: 6;
         }
+
         &__wrapper {
             // width: 271px;
             display: inline-block;
             position: relative;
             // height: 403px;
         }
-        &__wrapper.products-add-item__not-available { 
+
+        &__wrapper.products-add-item__not-available {
+
             & .products-add-item__notify-link,
             & .products-add-item__notify-text {
                 display: block;
             }
+
             & .products-add-item__cart {
                 display: none;
             }
+
             & .products-add-item__price {
                 display: none;
             }
+
             &:hover {
                 & .products-add-item__hover {
                     display: none;
                 }
             }
         }
+
         &__notify {
             &-link {
                 font-family: $SFProDisplay;
@@ -883,6 +1009,7 @@ section {
                 cursor: pointer;
                 display: none;
             }
+
             &-text {
                 font-family: $SFProDisplay;
                 font-style: normal;
@@ -896,6 +1023,7 @@ section {
                 display: none;
             }
         }
+
         &__favourite {
             position: absolute;
             top: 16px;
@@ -911,13 +1039,16 @@ section {
             outline: none;
             border: none;
             cursor: pointer;
+
             &--active {
                 background-image: url('../img/heart-blue.svg');
             }
         }
+
         &__img {
             width: 200px;
-        } 
+        }
+
         &__title {
             font-weight: 400;
             padding: 14px 0 25px;
@@ -925,6 +1056,7 @@ section {
             width: 80%;
             margin: 0 auto;
         }
+
         &__cart {
             position: absolute;
             width: 60px;
@@ -940,11 +1072,13 @@ section {
             justify-content: center;
             cursor: pointer;
         }
+
         &__price {
             font-weight: 700;
             font-size: 30px;
             line-height: 1.2;
         }
+
         &__hover {
             padding: 18px 21px;
             background: rgba($white, .9);
@@ -962,50 +1096,62 @@ section {
             color: $text-main;
         }
     }
+
     & .slick-slide img {
         display: inline;
     }
 }
+
 .footer {
     background-color: $border-grey;
     color: $text-main;
+
     &__top {
         padding-top: 43px;
+
         &-inner {
             display: flex;
             justify-content: space-between;
         }
+
         &-item {
             // width: 190px;
         }
+
         &-news {
             width: 295px;
         }
+
         &-title {
             font-family: $SFProDisplay;
             font-style: normal;
             font-weight: 700;
             font-size: 14px;
             line-height: 1.2;
-            color: #2F3035;            
+            color: #2F3035;
         }
     }
+
     &__form {
         margin-top: 34px;
         display: flex;
         justify-content: center;
+
         &-input {
             font-family: $SFProDisplay;
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
+
             &::placeholder {
                 color: #C4C4C4;
             }
+
             outline: none;
             border: none;
             padding: 10px 12px;
         }
+
         &-btn {
             text-transform: uppercase;
             padding: 10px 16px;
@@ -1021,6 +1167,7 @@ section {
             letter-spacing: 0.12em;
         }
     }
+
     &__list {
         &-link {
             font-family: $SFProDisplay;
@@ -1030,16 +1177,19 @@ section {
             color: #2F3035;
         }
     }
+
     &__bottom {
         padding: 46px 0 22px;
         display: flex;
         justify-content: center;
+
         &-link {
             font-size: 10px;
             margin: 0 40px;
             color: #48494D;
         }
     }
+
     & .social {
         display: flex;
         gap: 30px;
@@ -1048,14 +1198,17 @@ section {
         align-items: center;
     }
 }
+
 .breadcrumbs {
     margin-top: 43px;
+
     &__list {
         &-li {
             display: inline-block;
             padding-right: 16px;
             margin-right: 10px;
             position: relative;
+
             &::after {
                 content: '';
                 position: absolute;
@@ -1068,10 +1221,12 @@ section {
                 background-repeat: no-repeat;
                 background-position: center center;
             }
+
             &:last-child::after {
                 display: none;
             }
         }
+
         &-link {
             font-family: $SFProDisplay;
             font-style: normal;
@@ -1081,21 +1236,26 @@ section {
         }
     }
 }
+
 .catalog {
     margin-bottom: 100px;
+
     &__title {
         font-family: $SFProDisplay;
         font-style: normal;
         font-weight: 700;
         font-size: 30px;
         color: #2F3035;
-        margin-bottom: 30px;        
+        margin-bottom: 30px;
     }
+
     &__filter {
         display: flex;
         justify-content: space-between;
         margin-bottom: 50px;
+
         &-items {}
+
         &-item {
             font-size: 14px;
             opacity: 0.7;
@@ -1104,16 +1264,20 @@ section {
             border: none;
             padding: 5px 22px;
             cursor: pointer;
-            & + .catalog__filter-item {
+
+            &+.catalog__filter-item {
                 margin-left: 8px;
             }
+
             &:hover {
                 opacity: 1;
             }
         }
+
         &-btns {
             display: flex;
             align-items: center;
+
             & button {
                 background: transparent;
                 cursor: pointer;
@@ -1123,35 +1287,43 @@ section {
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
-                & + button {
+
+                &+button {
                     margin-left: 10px;
                 }
             }
         }
+
         &-img {
             width: 100%;
         }
     }
+
     & .products-item__title {
         width: 100%;
     }
+
     &__inner {
         display: flex;
     }
+
     &__grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
+
     &__aside {
         min-width: 290px;
         margin-right: 10px;
         flex-basis: 290px;
+
         &-tabs {
             display: flex;
             justify-content: flex-start;
             gap: 42px;
         }
+
         &-tab {
             font-family: $SFProDisplay;
             font-style: normal;
@@ -1163,6 +1335,7 @@ section {
             display: inline-block;
             position: relative;
             margin-bottom: 10px;
+
             &::after {
                 content: '';
                 width: 100%;
@@ -1173,17 +1346,20 @@ section {
                 bottom: -7px;
                 left: 0;
             }
+
             &.tab--active {
                 font-weight: 700;
                 color: #2F3035;
+
                 &::after {
                     background-color: $blue;
                 }
             }
-    
+
         }
     }
 }
+
 .pagination {
     width: 100%;
     margin-top: 70px;
@@ -1191,8 +1367,9 @@ section {
     display: flex;
     gap: 40px;
     justify-content: center;
-    &-li {
-    }
+
+    &-li {}
+
     &-link {
         padding: 11px 15px;
         border: 1px solid transparent;
@@ -1204,27 +1381,31 @@ section {
         display: inline-flex;
         line-height: 1;
     }
+
     &-active {
         color: #1C62CD;
         border: 2px solid #1C62CD;
         font-weight: 600;
     }
 }
-.filter-aside {
-    &__form {
 
-    }
+.filter-aside {
+    &__form {}
+
     &__list {}
+
     &__item {
         &-drop {
             margin: 40px 0;
             position: relative;
+
             &--active {
                 & .filter-aside__title-img {
                     transform: rotate(0deg);
                 }
             }
         }
+
         &-title {
             font-family: $SFProDisplay;
             font-weight: 600;
@@ -1232,6 +1413,7 @@ section {
             padding-left: 26px;
         }
     }
+
     // &__drop {
     //     position: relative;
     //     &::before {
@@ -1263,6 +1445,7 @@ section {
     //     }
     // }
     &__drop {}
+
     &__title {
         &-wrap {
             display: flex;
@@ -1270,13 +1453,16 @@ section {
             justify-content: flex-start;
             gap: 10px;
             margin-bottom: 10px;
+            cursor: pointer;
         }
+
         &-img {
             width: 12px;
             height: 8px;
             transform: rotate(180deg);
             transition: .5s;
         }
+
         &-text {
             font-family: $SFProDisplay;
             font-weight: 600;
@@ -1284,26 +1470,31 @@ section {
             // padding-left: 26px;
         }
     }
+
     &__checkbox {
         &-wrap {
             width: 100%;
         }
+
         &-box {
             display: flex;
             justify-content: flex-start;
             align-items: center;
             gap: 10px;
         }
+
         &-grid2 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             row-gap: 15px;
         }
+
         &-grid3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             row-gap: 15px;
         }
+
         &-label {
             font-family: $SFProDisplay;
             font-style: normal;
@@ -1312,4 +1503,97 @@ section {
             color: #2F3035;
         }
     }
+
+    &__price {
+        display: flex;
+        justify-content: space-between;
+
+        &-input {
+            display: inline;
+            width: 4em;
+            text-decoration: underline;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-family: $barlow;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #2F3035;
+        }
+        &-span {
+            font-family: $SFProDisplay;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #C4C4C4;
+        }
+        &-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 12px;
+        }
+    }
 }
+
+.jq-checkbox,
+.jq-checkbox.focused {
+    background: $white;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #C4C4C4;
+    border-radius: 1px;
+    box-shadow: none;
+
+    &.checked {
+        background: $blue;
+        border-radius: 0;
+        border: 1px solid $blue;
+    }
+}
+
+.jq-checkbox.checked .jq-checkbox__div {
+    border-bottom: 1px solid $white;
+    border-left: 1px solid $white;
+    margin: 3px 0 0 2px;
+}
+
+.irs--flat.irs-with-grid {
+    width: 90%;
+}
+
+.irs-from,
+.irs-to,
+.irs-grid-text,
+.irs-with-grid .irs-grid,
+.irs-max {
+    display: none;
+}
+
+.irs--round .irs-bar {
+    background-color: #1C62CD;
+}
+
+.irs--round .irs-handle, 
+.irs--round .irs-handle:hover{
+    border: none;
+    background-color: #1C62CD;
+    width: 8px;
+    height: 8px;
+    box-shadow: none;
+    top: 16px;
+}
+
+.irs--round .irs-bar {
+    height: 3px;
+    top: 19px;
+}
+
+.irs--round .irs-line {
+    top: 20px;
+    height: 1px;
+}
+.irs--round.irs-with-grid {
+    height: 30px;
+  }

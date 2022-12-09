@@ -71,7 +71,7 @@ $('.products-add-slider').slick({
 $('.filter-style').styler();
 $('.catalog__filter-select').styler();
 
-$('.filter-aside__item-drop').on('click', function(e) {
+$('.filter-aside__title-wrap').on('click', function(e) {
     $(this).toggleClass('filter-aside__item-drop--active');
-    $(this).find('.filter-aside__checkbox-wrap').slideToggle('300');
+    $(this).parent().find('.filter-aside__checkbox-wrap, .filter-aside__wrapper').slideToggle('300');
 })

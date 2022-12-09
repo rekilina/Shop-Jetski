@@ -1348,6 +1348,7 @@ section {
   justify-content: flex-start;
   gap: 10px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .filter-aside__title-img {
@@ -1392,4 +1393,101 @@ section {
   font-weight: 400;
   font-size: 14px;
   color: #2F3035;
+}
+
+.filter-aside__price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-aside__price-input {
+  display: inline;
+  width: 4em;
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #2F3035;
+}
+
+.filter-aside__price-span {
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #C4C4C4;
+}
+
+.filter-aside__price-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.jq-checkbox,
+.jq-checkbox.focused {
+  background: #FFFFFF;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #C4C4C4;
+  border-radius: 1px;
+  box-shadow: none;
+}
+
+.jq-checkbox.checked,
+.jq-checkbox.focused.checked {
+  background: #1C62CD;
+  border-radius: 0;
+  border: 1px solid #1C62CD;
+}
+
+.jq-checkbox.checked .jq-checkbox__div {
+  border-bottom: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  margin: 3px 0 0 2px;
+}
+
+.irs--flat.irs-with-grid {
+  width: 90%;
+}
+
+.irs-from,
+.irs-to,
+.irs-grid-text,
+.irs-with-grid .irs-grid,
+.irs-max {
+  display: none;
+}
+
+.irs--round .irs-bar {
+  background-color: #1C62CD;
+}
+
+.irs--round .irs-handle,
+.irs--round .irs-handle:hover {
+  border: none;
+  background-color: #1C62CD;
+  width: 8px;
+  height: 8px;
+  box-shadow: none;
+  top: 16px;
+}
+
+.irs--round .irs-bar {
+  height: 3px;
+  top: 19px;
+}
+
+.irs--round .irs-line {
+  top: 20px;
+  height: 1px;
+}
+
+.irs--round.irs-with-grid {
+  height: 30px;
 }
