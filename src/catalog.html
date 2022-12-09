@@ -105,6 +105,29 @@
                                                 <div class="filter-aside__title-wrap filter-aside__drop">
                                                     <img src="@img/arrow-up.svg" alt="arrow-up" class="filter-aside__title-img">
                                                     <p class="filter-aside__title-text">
+                                                        Цена
+                                                    </p>
+                                                </div>
+                                                <div class="filter-aside__wrapper">
+                                                    <input type="text" name="price_range" id="" class="js-range-slider" 
+                                                    value="200000" data-type="double" data-min="100000" data-max="500000" data-form="200000" 
+                                                    data-to="300000" data-grid="true">
+                                                    <div class="filter-aside__price">
+                                                        <div class="filter-aside__price-box">
+                                                            <span class="filter-aside__price-span">от </span>
+                                                            <input id="filter-aside__price-min" class="filter-aside__price-input" value="100000">
+                                                        </div>
+                                                        <div class="filter-aside__price-box">
+                                                            <span class="filter-aside__price-span">до </span>
+                                                            <input id="filter-aside__price-max" class="filter-aside__price-input" value="500000">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="filter-aside__item-drop">
+                                                <div class="filter-aside__title-wrap filter-aside__drop">
+                                                    <img src="@img/arrow-up.svg" alt="arrow-up" class="filter-aside__title-img">
+                                                    <p class="filter-aside__title-text">
                                                         Бренд
                                                     </p>
                                                 </div>
@@ -408,6 +431,7 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="@js/rangeslider.js"></script>
     <script src="@js/formstyler.js"></script>
+    <script src="@js/ionrangeSlider.js"></script>
     <script src="@js/app.js"></script>
 </body>
 
