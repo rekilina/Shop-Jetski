@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html', {
+    "title": "Главная"
+})
+
+<body>
+    @@include('html/header.html', {}) 
+    <main>
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__list-li">
+                        <a href="#" class="breadcrumbs__list-link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__list-li">
+                        <a href="#" class="breadcrumbs__list-link">Гидроциклы</a>
+                    </li>
+                    <li class="breadcrumbs__list-li">
+                        <a href="#" class="breadcrumbs__list-link">Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="container">
+                <div class="product-card__inner">
+                    <div class="product-card__imgbox">
+                        <img src="@img/content/product-card-img.png" alt="product-card-img" class="product-card__img">
+                        <p class="product-card__price-old">1 200 475 ₽</p>
+                        <p class="product-card__price-new">1 100 475 ₽</p>
+                        <a href="#" class="product-card__price-feedback">Нашли дешевле? Снизим цену!</a>
+                    </div>
+                    <div class="product-card__content">
+                        <h1 class="product-card__title">Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</h1>
+                        <p class="product-card__code"></p>
+                        <div class="product-card__buttons">
+                            <button class="product-card__buttons-favourite">
+                                <!-- <img src="" alt="" class="product-card__favourite-img"> -->
+                            </button>
+                            <button class="product-card__buttons-compare">
+                                <!-- <img src="" alt="" class="product-card__compare-img"> -->
+                            </button>
+                            <div class="stars-rating"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('html/footer.html', {}) 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="@js/app.js"></script>
+</body>
