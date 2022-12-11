@@ -1754,3 +1754,106 @@ section {
   height: 0;
   border: none;
 }
+
+.product-card {
+  margin-bottom: 80px;
+}
+
+.product-card__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card__imgbox {
+  width: 500px;
+  padding-top: 64px;
+  text-align: center;
+  position: relative;
+}
+
+.product-card__imgbox.products-item--sale::before {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  color: #FFFFFF;
+  padding: 13px 25px;
+  border-radius: 3px;
+}
+
+.product-card__price-old {
+  font-size: 30px;
+  opacity: 0.6;
+  color: #2F3035;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) calc(50% - 1px), #cdcdcd 50%, rgba(0, 0, 0, 0) calc(50% + 1px), rgba(0, 0, 0, 0) 100%);
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 6px;
+  display: inline;
+}
+
+.product-card__price-new {
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 17px;
+}
+
+.product-card__price-feedback {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #1C62CD;
+}
+
+.product-card__price-feedback:hover {
+  text-decoration: underline;
+}
+
+.product-card__content {
+  width: 570px;
+}
+
+.product-card__buttons-favourite {
+  background-image: url(../img/heart.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 24px;
+  height: 22px;
+  background-color: transparent;
+  border: none;
+}
+
+.product-card__buttons-compare {
+  background-image: url(../img/compare.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 20px;
+  height: 27px;
+  background-color: transparent;
+  border: none;
+}
+
+.product-card__tab {
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #2F3035;
+  opacity: 0.6;
+}
+
+.product-card__tab.tab--active {
+  opacity: 1;
+}
+
+.product-card__list-li {
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #2F3035;
+}
