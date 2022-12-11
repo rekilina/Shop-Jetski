@@ -33,7 +33,8 @@ export const js = () => {
                 app: "./src/js/app.js",
                 rangeslider: "./src/js/rangeslider.min.js",
                 ionrangeslider: "./src/js/ionrangeSlider.js",
-                formstyler: "./src/js/jquery.formstyler.min.js"    
+                formstyler: "./src/js/jquery.formstyler.min.js",
+                rateyo: "./src/js/jquery.rateyo.js",
             },
             output: {
                 filename: '[name].js',

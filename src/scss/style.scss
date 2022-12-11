@@ -1801,7 +1801,7 @@ section {
         position: relative;
         &.products-item--sale {
             &::before {
-                font-family: 'SF Pro Display';
+                font-family: $SFProDisplay;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 15px;
@@ -1830,7 +1830,7 @@ section {
             margin-bottom: 17px;
         }
         &-feedback {
-            font-family: 'SF Pro Display';
+            font-family: $SFProDisplay;
             font-style: normal;
             font-weight: 400;
             font-size: 15px;
@@ -1843,9 +1843,28 @@ section {
     &__content {
         width: 570px;
     }
-    &__title {}
-    &__code {}
+    &__title {
+        font-family: $SFProDisplay;
+        color:$text-main;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    &__code {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        font-family: $SFProDisplay;
+        opacity: 0.6;
+        color: $text-main;
+        margin-bottom: 22px;
+    }
     &__buttons {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         &-favourite {
             background-image: url(../img/heart.svg);
             background-size: 100% 100%;
@@ -1855,6 +1874,11 @@ section {
             height: 22px;
             background-color: transparent;
             border: none;
+            margin-right: 29px;
+            cursor: pointer;
+            &.product-card__buttons--active {
+                background-image: url(../img/heart-blue.svg);
+            }
         }
         &-compare {
             background-image: url(../img/compare.svg);
@@ -1865,13 +1889,33 @@ section {
             height: 27px;
             background-color: transparent;
             border: none;
+            margin-right: 25px;
+            cursor: pointer;
+            &.product-card__buttons--active {
+                background-image: url(../img/compare-blue.svg);
+            }
         }
     }
     &__tabs {
         &-wrapper {
             
         }
-        &-buy {}
+        &-buy {
+            padding: 16px 53px;
+            background-color: #1C62CD;
+            text-transform: uppercase;
+            color: $white;
+            font-family: $SFProDisplay;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.12em;
+            margin-top: 45px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
     }
     &__tab {
         font-family: $SFProDisplay;
@@ -1880,24 +1924,54 @@ section {
         font-size: 20px;
         color: #2F3035;
         opacity: 0.6;
+        padding-bottom: 5px;
+        padding-right: 17px;
+        display: inline-block;
+        margin-bottom: px;
+        & + .product-card__tab {
+            padding-left: 17px;
+        }
         &.tab--active {
             opacity: 1;
+            border-bottom: 2px solid $blue;
         }
         &-content {
         }
     }
     &__list {
+        width: 90%;
         &-li {
+            margin-top: 15px;
+            padding-bottom: 6px;
             font-family: $SFProDisplay;
             font-style: normal;
             font-weight: 400;
             font-size: 20px;
             color: #2F3035;
+            border-bottom: 1px solid rgba(#2F3035, .1);
+            display: grid;
+            grid-template-columns: 65% 35%;
+
         }
         &-left {
+            // display: inline-block;
         }
-        &-right {}
-        &-more {}
+        &-right {
+
+        }
+        &-more {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            font-family: $SFProDisplay;
+            color: #1C62CD;
+            text-decoration: underline;
+            margin-top: 20px;
+            display: inline-block;
+        }
     }
 }
-.stars-rating {}
+.stars-rating {
+    // display: inline;
+}

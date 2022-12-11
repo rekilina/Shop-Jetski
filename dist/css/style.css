@@ -1772,7 +1772,7 @@ section {
 }
 
 .product-card__imgbox.products-item--sale::before {
-  font-family: "SF Pro Display";
+  font-family: "SFProDisplay", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -1800,7 +1800,7 @@ section {
 }
 
 .product-card__price-feedback {
-  font-family: "SF Pro Display";
+  font-family: "SFProDisplay", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -1815,6 +1815,32 @@ section {
   width: 570px;
 }
 
+.product-card__title {
+  font-family: "SFProDisplay", sans-serif;
+  color: #2F3035;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.product-card__code {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: "SFProDisplay", sans-serif;
+  opacity: 0.6;
+  color: #2F3035;
+  margin-bottom: 22px;
+}
+
+.product-card__buttons {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .product-card__buttons-favourite {
   background-image: url(../img/heart.svg);
   background-size: 100% 100%;
@@ -1824,6 +1850,12 @@ section {
   height: 22px;
   background-color: transparent;
   border: none;
+  margin-right: 29px;
+  cursor: pointer;
+}
+
+.product-card__buttons-favourite.product-card__buttons--active {
+  background-image: url(../img/heart-blue.svg);
 }
 
 .product-card__buttons-compare {
@@ -1835,6 +1867,29 @@ section {
   height: 27px;
   background-color: transparent;
   border: none;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.product-card__buttons-compare.product-card__buttons--active {
+  background-image: url(../img/compare-blue.svg);
+}
+
+.product-card__tabs-buy {
+  padding: 16px 53px;
+  background-color: #1C62CD;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  margin-top: 45px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .product-card__tab {
@@ -1844,16 +1899,46 @@ section {
   font-size: 20px;
   color: #2F3035;
   opacity: 0.6;
+  padding-bottom: 5px;
+  padding-right: 17px;
+  display: inline-block;
+  margin-bottom: px;
+}
+
+.product-card__tab + .product-card__tab {
+  padding-left: 17px;
 }
 
 .product-card__tab.tab--active {
   opacity: 1;
+  border-bottom: 2px solid #1C62CD;
+}
+
+.product-card__list {
+  width: 90%;
 }
 
 .product-card__list-li {
+  margin-top: 15px;
+  padding-bottom: 6px;
   font-family: "SFProDisplay", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   color: #2F3035;
+  border-bottom: 1px solid rgba(47, 48, 53, 0.1);
+  display: grid;
+  grid-template-columns: 65% 35%;
+}
+
+.product-card__list-more {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: "SFProDisplay", sans-serif;
+  color: #1C62CD;
+  text-decoration: underline;
+  margin-top: 20px;
+  display: inline-block;
 }
