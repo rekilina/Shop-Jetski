@@ -68,7 +68,7 @@ $('.products-add-slider').slick({
     nextArrow: '<button class="products-slider-btn products-slider-btn-next"> <img src="img/arrow-right-black.svg" alt="arrow-right-black"></button>',
 })
 
-$('.filter-style').styler();
+// $('.filter-style').styler();
 $('.catalog__filter-select').styler();
 
 $('.filter-aside__drop').on('click', function (e) {

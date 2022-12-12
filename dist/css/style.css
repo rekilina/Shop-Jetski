@@ -1755,10 +1755,6 @@ section {
   border: none;
 }
 
-.product-card {
-  margin-bottom: 80px;
-}
-
 .product-card__inner {
   display: flex;
   justify-content: space-between;
@@ -1941,4 +1937,211 @@ section {
   text-decoration: underline;
   margin-top: 20px;
   display: inline-block;
+}
+
+.product-about__tabs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F0F0F4;
+  padding: 23px 24px 18px 38px;
+}
+
+.product-about__tab {
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #2F3035;
+  opacity: 0.6;
+  padding: 0 3px 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.product-about__tab.tab--active {
+  opacity: 1;
+  border-bottom: 2px solid #1C62CD;
+}
+
+.product-about__tab-content {
+  padding: 50px 0 0 38px;
+}
+
+.product-about__form-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.product-about__input {
+  margin-right: 184px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 17px;
+  position: relative;
+}
+
+.product-about__input-label {
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  color: #2F3035;
+  opacity: 0.7;
+}
+
+.product-about__input-field {
+  width: 295px;
+  height: 33px;
+  font-size: 14px;
+  padding-left: 17px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-right: 25px;
+  outline: none;
+  border: none;
+  background-color: #F0F0F4;
+  border-radius: 3px;
+  position: relative;
+  color: #2F3035;
+}
+
+.product-about__input-btn {
+  width: 33px;
+  height: 33px;
+  background-image: url(../img/Search.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center center;
+  position: relative;
+  left: -20px;
+  display: inline-block;
+  background-color: #F0F0F4;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 0 3px 3px 0;
+}
+
+.product-about__radio {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+.product-about__radio + .product-about__radio {
+  margin-left: 54px;
+}
+
+.product-about__radio-label {
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  color: #2F3035;
+  opacity: 0.7;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.product-about__radio-label::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(196, 196, 196, 0.54);
+  mix-blend-mode: normal;
+  display: inline-block;
+  border-radius: 2px;
+  position: relative;
+  right: 15px;
+  cursor: pointer;
+}
+
+.product-about__radio-field {
+  display: none;
+}
+
+.product-about__radio-field:checked + label::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 2px solid #1c62cd;
+  mix-blend-mode: normal;
+  display: inline-block;
+  border-radius: 2px;
+  position: relative;
+  right: 15px;
+}
+
+.product-about__radio-field:checked + label::after {
+  content: "";
+  width: 8.5px;
+  height: 8.5px;
+  border: none;
+  display: inline-block;
+  border-radius: 1px;
+  position: absolute;
+  background-color: #1C62CD;
+  top: 6px;
+  left: -12px;
+}
+
+.product-about__list {
+  margin-top: 30px;
+}
+
+.product-about__li {
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(47, 48, 53, 0.7);
+  display: grid;
+  grid-template-columns: 26% 22% 18% 20% 14%;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(47, 48, 53, 0.1);
+}
+
+.product-about__li:first-child {
+  border-bottom: none;
+}
+
+.product-about__li-title {
+  font-family: "SFProDisplay", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #2F3035;
+}
+
+.product-about__li-address {
+  width: 70%;
+  line-height: 1.5;
+}
+
+.product-about__li-hours {
+  width: 65%;
+  line-height: 1.5;
+}
+
+.product-about__li-hours-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-about__li-btn {
+  font-size: 13px;
+  font-family: "SFProDisplay", sans-serif;
+  letter-spacing: 0.12em;
+  color: #FFFFFF;
+  padding: 10px 40px;
+  background-color: #1C62CD;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  text-transform: uppercase;
 }
